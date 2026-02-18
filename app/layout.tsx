@@ -14,6 +14,12 @@ const poppins = Poppins({
   display: 'swap',
 })
 
+// next/font returns .variable when the variable option is set (TypeScript types may not include it)
+const fontVariables = [
+  (playfair as { variable?: string }).variable,
+  (poppins as { variable?: string }).variable,
+].filter(Boolean).join(' ')
+
 export const metadata: Metadata = {
   title: 'IBC Nails | Tirana',
   description: 'Premium nail studio in Tirana. Manicure, pedicure, VIP rooms, custom nail designs.',
@@ -25,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
+    <html lang="en" className={fontVariables || undefined}>
       <body className={poppins.className}>{children}</body>
     </html>
   )
