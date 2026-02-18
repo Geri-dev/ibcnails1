@@ -8,7 +8,7 @@ const galleryItems = [
   { type: 'video' as const, src: '/videos/nails-video-3.mp4', alt: 'Nail art' },
   { type: 'image' as const, src: '/images/details-nails-1.webp', alt: 'Nail details' },
   { type: 'image' as const, src: '/images/details-nails-2.webp', alt: 'Nail details' },
-  { type: 'image' as const, src: '/images/ekseperienca.webp', alt: 'Experience' },
+  { type: 'image' as const, src: '/images/Eksperienca.webp', alt: 'Experience' },
 ]
 
 export function GallerySection() {
